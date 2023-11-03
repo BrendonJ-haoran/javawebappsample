@@ -7,7 +7,7 @@ def getFtpPublishProfile(def publishProfilesJson) {
       return [url: p.publishUrl, username: p.userName, password: p.userPWD]
 }
 
-stages {
+node {
   withEnv(['AZURE_SUBSCRIPTION_ID=140aa885-a939-424c-91ac-1dd90d50b9c2',
         'AZURE_TENANT_ID=cb3e0d42-176d-499a-82ea-ebefcfd94839']) {
     stage('init') {
